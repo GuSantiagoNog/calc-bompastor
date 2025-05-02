@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caixa da Cantina</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="header"><h1>Calculadora Caixa</h1>
+    <img src="assets/images/logo bom pastor.png" alt="logo"></div>
+    
+
+    <section class="buttons">
+      <button onclick="adicionarItem('Abençoadinho', 15)">Abençoadinho - R$15</button>
+      <button onclick="adicionarItem('Lanche de pernil', 12)">Lanche de pernil - R$12</button>
+      <button onclick="adicionarItem('Batata Frita', 10)">Batata Frita - R$10</button>
+      <button onclick="adicionarItem('Polenta', 10)">Polenta - R$10</button>
+      <button onclick="adicionarItem('Fondue', 12)">Fondue - R$12</button>
+      <button onclick="adicionarItem('Churrasquinho', 8)">Churrasquinho - R$8</button>
+      <button onclick="adicionarItem('Crepe', 7)">Crepe - R$7</button>
+      <button onclick="adicionarItem('Mini Pizza', 6)">Mini Pizza - R$6</button>
+      <button onclick="adicionarItem('Pastel', 6)">Pastel - R$6</button>
+      <button onclick="adicionarItem('Bolinho de Frango', 5)">Bolinho de Frango - R$6</button>
+      <button onclick="adicionarItem('Doce', 6)">Doce - R$6</button>
+      <button onclick="adicionarItem('Refrigerante', 7)">Refrigerante - R$7</button>
+      <button onclick="adicionarItem('Suco de laranja', 7)">Suco de laranja - R$7</button>               
+      <button onclick="adicionarItem('Água', 3)">Água - R$3</button>
+      <button onclick="adicionarItem('Pescaria', 4)">Pescaria - R$4</button>
+      <button onclick="adicionarItem('Brincadeiras', 5)">Brincadeiras - R$5</button>
+    </section>
+
+    <section id="lista" class="lista"></section>
+
+    <h2>Total: R$<span id="total">0</span></h2>
+    <button class="limpar" onclick="limpar()">Limpar Pedido</button>
+  </main>
+
+  <script src="assets/scripts/script.js"></script>
+</body>
+</html>
