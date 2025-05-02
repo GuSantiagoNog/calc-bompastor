@@ -10,13 +10,25 @@ function adicionarItem(nome, preco) {
   atualizarTela();
 }
 
+function removerItem(nome) {
+  if (pedido[nome] && pedido[nome].quantidade > 0) {
+    pedido[nome].quantidade--;
+    total -= pedido[nome].preco;
+    atualizarTela();
+  }
+}
+
 function atualizarTela() {
   const lista = document.getElementById('lista');
   lista.innerHTML = '';
   for (const item in pedido) {
     if (pedido[item].quantidade > 0) {
       const subtotal = pedido[item].quantidade * pedido[item].preco;
-      lista.innerHTML += `<p>${pedido[item].quantidade} ${item} - R$${subtotal}</p>`;
+      lista.innerHTML += `
+        <p>
+          ${pedido[item].quantidade} ${item} - R$${subtotal}
+          <button class="remover" onclick="removerItem('${item}')">-</button>
+        </p>`;
     }
   }
   document.getElementById('total').innerText = total;
